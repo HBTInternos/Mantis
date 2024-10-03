@@ -1,0 +1,58 @@
+<?php
+$g_hostname               = 'localhost';
+$g_db_type                = 'mysqli';
+$g_database_name          = 'bugtracker';
+//$g_db_username            = 'root';
+//$g_db_password            = 'Asdf1234$%';
+$g_db_username            = 'root';
+$g_db_password            = ''; 
+
+$g_default_timezone       = 'America/Bogota';
+
+// $g_crypto_master_salt     = 'i/r6tyqIDZaIo0SvSx27j8I1RSEqUhMVfP7NNTL0N7E=';
+$g_crypto_master_salt     = '1zkjT5jCFmIrq6PVsYfHYCw/azdGLW0Hvhp1kK6uNIU=';
+
+$g_administrator_email	= 'admin-mantis@heinsohn.com.co';
+$g_webmaster_email		= 'admin-manits@heinsohn.com.co';
+$g_from_email           = 'admin-mantis@heinsohn.com.co';
+$g_return_path_email    = 'admin-mantis@heinsohn.com.co';
+/**
+ * browser window title
+ * @global string $g_window_title
+ */
+$g_window_title			= 'Heinsohn Business Techology'; // Req 679
+
+$g_phpMailer_method = PHPMAILER_METHOD_SMTP;
+
+/*#$g_smtp_host = 'outbounds9.obsmtp.com';*/
+$g_smtp_host = 'smtp.office365.com';
+ 
+$g_show_realname = ON;
+
+
+$g_default_language		= 'spanish';
+
+$g_allow_signup = ON;
+
+#############################
+# Mantis LDAP Settings HBT
+#############################
+
+$g_login_method				= LDAP;
+
+//$g_ldap_server			= 'dominio.heinsohn.com.co';
+$g_ldap_server			= 'dominio.heinsohn.co';
+//$g_ldap_port			= '389';
+$g_ldap_root_dn			= 'dc=heinsohn,dc=com,dc=co';
+$g_ldap_organization	= '';    # e.g. '(organizationname=*Traffic)'
+$g_ldap_uid_field		= 'sAMAccountName'; # Use 'sAMAccountName' for Active Directory
+#$g_ldap_bind_dn			= 'internos@heinsohn.com.co';
+#$g_ldap_bind_passwd		= 'Asdf1234$';
+$g_ldap_bind_dn			= 'consultas@heinsohn.com.co';
+$g_ldap_bind_passwd		= 'Asdf1234##';
+$g_use_ldap_email		= OFF; # Should we send to the LDAP email address or what MySql tells us
+
+# The LDAP Protocol Version, if 0, then the protocol version is not set.
+$g_ldap_protocol_version = 3;
+$g_ldap_follow_referrals = OFF;
+?>

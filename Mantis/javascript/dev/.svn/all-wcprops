@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svnrepos/mantis/!svn/ver/1/javascript/dev
+END
+common.js
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnrepos/mantis/!svn/ver/1/javascript/dev/common.js
+END
+xmlhttprequest.js
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnrepos/mantis/!svn/ver/1/javascript/dev/xmlhttprequest.js
+END
+addLoadEvent.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnrepos/mantis/!svn/ver/1/javascript/dev/addLoadEvent.js
+END
+dynamic_filters.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnrepos/mantis/!svn/ver/1/javascript/dev/dynamic_filters.js
+END
+time_tracking_stopwatch.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnrepos/mantis/!svn/ver/1/javascript/dev/time_tracking_stopwatch.js
+END
+ajax.js
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svnrepos/mantis/!svn/ver/1/javascript/dev/ajax.js
+END
