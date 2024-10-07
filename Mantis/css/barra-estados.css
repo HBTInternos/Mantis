@@ -1,0 +1,99 @@
+/* Estilos de view_all_inc */
+#barra-estados {
+    border: 1px solid #428BCA; 
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    padding: 10px;              
+    width: 100%;                 
+    box-sizing: border-box;      
+    margin: 35px auto;          
+}
+
+#barra-estados ul {
+    display: flex;             
+    justify-content: space-between; 
+    padding: 0;                 
+    margin: 0;                 
+    list-style: none;           
+    width: 100%;   
+}
+
+.estado-item {
+    display: flex;              
+    align-items: center;         
+    justify-content: center;     
+    padding: 0 15px;            
+    color: black;               
+    text-align: center;          
+}
+
+.color-box {
+    display: inline-block;      
+    width: 20px;                 
+    height: 20px;               
+    margin-right: 10px;         
+    border-radius: 20%;          
+}
+.estado-item span {
+    vertical-align: middle;    
+}
+
+.estado-nueva { background-color: #FCBDBD; }
+.estado-incompleto { background-color: #E3B7EB; }
+.estado-aceptada { background-color:#FFCD85; }
+.estado-confirmada { background-color: #FFF494; }
+.estado-asignada { background-color: #C2DFFF; }
+.estado-resuelta { background-color: #D2F5B0; }
+.estado-cerrada{background-color: #C9CCC4;}
+
+/* Estilos de my_view_page.php */
+#barra-estado {
+    border: 1px solid #428BCA; 
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    padding: 10px;              
+    width: 97.5%;                 
+    box-sizing: border-box;      
+    margin: 35px auto;  
+}
+
+#barra-estado ul {
+    display: flex;             
+    justify-content: space-between; 
+    padding: 0;                 
+    margin: 0;                 
+    list-style: none;           
+    width: 100%;  
+}
+
+.estado-items {
+    display: flex;              
+    align-items: center;         
+    justify-content: center;     
+    padding: 0 15px;            
+    color: black;               
+    text-align: center;  
+}
+
+.color-box-alt {
+    display: inline-block;      
+    width: 20px;                 
+    height: 20px;               
+    margin-right: 10px;         
+    border-radius: 20%;   
+}
+
+.estado-items span {
+    vertical-align: middle;    
+}
+
+/* Colores según los estados */
+.estado-nueva { background-color: #FCBDBD; }
+.estado-incompleto { background-color: #E3B7EB; }
+.estado-aceptada { background-color: #FFCD85; }
+.estado-confirmada { background-color: #FFF494; }
+.estado-asignada { background-color: #C2DFFF; }
+.estado-resuelta { background-color: #D2F5B0; }
+.estado-cerrada { background-color: #C9CCC4; }

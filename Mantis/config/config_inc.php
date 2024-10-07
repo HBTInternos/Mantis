@@ -1,11 +1,11 @@
 <?php
-$g_hostname               = 'localhost';
+$g_hostname               = '';
 $g_db_type                = 'mysqli';
-$g_database_name          = 'mantis_dev';
+$g_database_name          = 'mantis';
 //$g_db_username            = 'root';
 //$g_db_password            = 'Asdf1234$%';
-$g_db_username            = 'usuario_remoto';
-$g_db_password            = 'Asdf1234$'; 
+$g_db_username            = 'root';
+$g_db_password            = ''; 
 
 $g_default_timezone       = 'America/Bogota';
 
