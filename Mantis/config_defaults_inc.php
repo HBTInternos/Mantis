@@ -3941,7 +3941,7 @@ $g_my_view_boxes = array(
  * syndication is not used, it is recommended to set it to OFF.
  * @global integer $g_rss_enabled
  */
-$g_rss_enabled = ON;
+$g_rss_enabled = OFF;
 
 
 #####################
