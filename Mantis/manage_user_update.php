@@ -70,6 +70,7 @@ $f_email		= gpc_get_string( 'email', '' );
 $f_username		= gpc_get_string( 'username', '' );
 $f_realname		= gpc_get_string( 'realname', '' );
 $f_access_level	= gpc_get_int( 'access_level' );
+$f_autentication = gpc_get_string( 'autentication', '' );
 $f_user_id		= gpc_get_int( 'user_id' );
 
 if( config_get( 'enable_email_notification' ) == ON ) {
@@ -165,11 +166,14 @@ if( $f_protected && $t_old_protected ) {
 	$f_access_level = $t_old_access_level;
 } else {
 	$t_query = 'UPDATE {user}
-			SET username=' . db_param() . ', email=' . db_param() . ',
-				access_level=' . db_param() . ', enabled=' . db_param() . ',
-				protected=' . db_param() . ', realname=' . db_param() . '
-			WHERE id=' . db_param();
-	$t_query_params = array( $c_username, $c_email, $c_access_level, $c_enabled, $c_protected, $c_realname, $c_user_id );
+    SET username=' . db_param() . ', email=' . db_param() . ',
+    access_level=' . db_param() . ', enabled=' . db_param() . ',
+    protected=' . db_param() . ', realname=' . db_param() . ',
+    acceso=' . db_param() . '
+    WHERE id=' . db_param();
+
+$t_query_params = array( $c_username, $c_email, $c_access_level, $c_enabled, $c_protected, $c_realname, $f_autentication, $c_user_id );
+
 }
 
 $t_result = db_query( $t_query, $t_query_params );
