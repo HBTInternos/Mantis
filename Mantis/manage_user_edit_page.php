@@ -222,9 +222,7 @@ print_manage_menu( 'manage_user_page.php' );
 		</table>
 		</div>
 		</div>
-		</div>
-
-		<div class="widget-toolbox padding-8 clearfix">
+		</div><div class="widget-toolbox padding-8 clearfix">
 			<input type="submit" class="btn btn-primary btn-white btn-round" value="<?php echo lang_get( 'update_user_button' ) ?>" />
 			<?php
 			if( config_get( 'enable_email_notification' ) == ON ) { ?>
@@ -240,6 +238,8 @@ print_manage_menu( 'manage_user_page.php' );
 	</form>
 </div>
 <div class="space-10"></div>
+
+		
 <?php
 # User action buttons: RESET/UNLOCK and DELETE
 
@@ -251,15 +251,20 @@ $t_unlock = !user_is_login_request_allowed( $t_user['id'] );
 $t_delete = !( ( user_is_administrator( $t_user_id ) && ( user_count_level( config_get_global( 'admin_site_threshold' ) ) <= 1 ) ) );
 $t_impersonate = auth_can_impersonate( $t_user['id'] );
 
+
+$t_reset = true;
+$t_unlock = true;
+$t_delete = true;
+$t_impersonate = true;
+
 if( $t_reset || $t_unlock || $t_delete || $t_impersonate ) {
 ?>
-<div id="manage-user-actions-div" class="col-md-6 col-xs-12 no-padding">
-<div class="space-8"></div>
-<div class="btn-group">
+<div id="manage-user-actions-div" class="col col-xs-12 no-padding"> //-md-6
+<div class="btn-group" style="display: flex; gap: 1rem;  justify-content: center; align-items: center; margin: 0 auto">
 
-<!-- Reset/Unlock Button -->
+<!-- Reset/Unlock Button restablecer contraseña-->
 <?php if( $t_reset || $t_unlock ) { ?>
-	<form id="manage-user-reset-form" method="post" action="manage_user_reset.php" class="pull-left">
+	<form id="manage-user-reset-form" method="post" action="manage_user_reset.php">
 		<fieldset>
 			<?php echo form_security_field( 'manage_user_reset' ) ?>
 			<input type="hidden" name="user_id" value="<?php echo $t_user['id'] ?>" />
@@ -274,7 +279,7 @@ if( $t_reset || $t_unlock || $t_delete || $t_impersonate ) {
 
 <!-- Delete Button -->
 <?php if( $t_delete ) { ?>
-	<form id="manage-user-delete-form" method="post" action="manage_user_delete.php" class="pull-left">
+	<form id="manage-user-delete-form" method="post" action="manage_user_delete.php">
 		<fieldset>
 			<?php echo form_security_field( 'manage_user_delete' ) ?>
 			<input type="hidden" name="user_id" value="<?php echo $t_user['id'] ?>" />
@@ -299,17 +304,18 @@ if( $t_reset || $t_unlock || $t_delete || $t_impersonate ) {
 <?php } ?>
 
 <?php if( $t_reset ) { ?>
-<div class="col-md-6 col-xs-12 no-padding">
+<div class="col-xs-12 no-padding" style="text-align: center">
 <div class="space-4"></div>
 <div class="alert alert-info">
 <?php
 	print_icon( 'fa-info-circle' );
-	echo '&nbsp;';
+	//echo '&nbsp;';
 	if( ( ON == config_get( 'send_reset_password' ) ) && ( ON == config_get( 'enable_email_notification' ) ) ) {
 		echo lang_get( 'reset_password_msg' );
 	} else {
 		echo lang_get( 'reset_password_msg2' );
 	}
+	echo "<p>&nbsp;</p>";
 	//Add HBT
 	echo "<font color='red'>".lang_get('autentication_msg')."</font> </br></br>";
 	// fin ADD HBT
