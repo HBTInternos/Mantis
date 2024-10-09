@@ -259,7 +259,7 @@ $t_impersonate = true;
 
 if( $t_reset || $t_unlock || $t_delete || $t_impersonate ) {
 ?>
-<div id="manage-user-actions-div" class="col col-xs-12 no-padding"> //-md-6
+<div id="manage-user-actions-div" class="col col-xs-12 no-padding"> 
 <div class="btn-group" style="display: flex; gap: 1rem;  justify-content: center; align-items: center; margin: 0 auto">
 
 <!-- Reset/Unlock Button restablecer contraseña-->
